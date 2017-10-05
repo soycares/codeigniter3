@@ -36,7 +36,9 @@ license.txt
 readme.rst
 titulo2.png
 *.rar
+*/*.rar
 *.zip
+*/*.zip
 sync.ffs_db
 .vscode/*
 */.vscode/*
