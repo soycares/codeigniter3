@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="all,follow">
+        <meta name="googlebot" content="index,follow,snippet,archive">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Torpes</title>
+		        <!-- Bootstrap and Font Awesome css -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Css animations  -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- Theme stylesheet, if possible do not edit this stylesheet -->
+        <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+        <!-- Custom stylesheet - for your changes -->
+        <link href="css/custom.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.countdown.css">
+        
+
+        
+		
+		</head>
+  <body style="background:#fcfcfc">
+
+        <div id="all">
+			<div id="content" style="background:#fcfcfc">
+                <div class="container" style="background:white; ">
+
+				
+					<!-- INICIO -->
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-xs-12 text-center">
+							<script src="js/jquery-1.11.0.min.js"></script>
+							<script src="js/jquery.plugin.min.js"></script>
+							<script src="js/jquery.countdown.min.js"></script>
+							<script src="js/jquery.countdown-es.js"></script>
+							<script>
+							<?php
+								$fecha_arr = date_parse($fechaCierre);
+								
+							?>
+							$(function () {
+								var austDay = new Date();
+								/* austDay = new Date(<?=$fecha_arr["year"]?>, <?=($fecha_arr["month"] - 1)?>, <?=($fecha_arr["day"] - 1)?>,<?=$fecha_arr["hour"]?>,<?=$fecha_arr["minute"]?>,0); */
+								austDay = new Date(2017, 8, 23,11,3,20);
+								$('#defaultCountdown').countdown({until: austDay, 
+								/*format: 'dhmS',compact: true, description: '',*/
+								layout: '<b>{dn}</b> {dl}, <b>{hn}</b> {hl}, <b>{mn}</b> {ml} y <b>{sn}</b> {sl}',
+								expiryText: '<div class="over"><center>FIN</center></div>'});
+								/*$('#year').text(austDay.getFullYear());*/
+							});
+							</script>
+							<div class="alert alert-info" role="alert" >
+								Cierre de la jornada en 
+								<div id="defaultCountdown" style="display:inline-block"></div>
+							</div>
+						</div>
+					</div>
+					<!-- FIN -->
+					
+					
+					
+				</div>
+			</div>
+		</div>
+</body>
+</html>		
+
