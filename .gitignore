@@ -29,6 +29,13 @@ application/views/sync.ffs_db
 temporadas/*
 nbproject/*
 less/*
+assets/*
+css/*
+img/*
+js/*
+php/*
+system/*
+
 .htaccess
 config.php
 contributing.md
