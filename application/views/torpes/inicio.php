@@ -27,7 +27,7 @@
 				{
 					// Tiempo hasta cerrar jornada
 					?>
-					<!-- INICIO -->
+					<!-- INICIO -->  
 					<div class="row">
 						<div class="col-sm-12 col-md-12 col-xs-12 text-center">
 							<link rel="stylesheet" href="<?=base_url()?>/css/jquery.countdown.css">
