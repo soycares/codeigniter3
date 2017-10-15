@@ -223,7 +223,7 @@
                 else
                     $col=12;?>
             <div class="col-sm-<?=$col?> text-center  col-xs-6">
-                <button class="btn btn-template-main" type="submit"><i class="fa fa-envelope-o"></i>Enviar</button>
+                <button id="enviarForm" class="btn btn-template-main" type="submit"><i class="fa fa-envelope-o"></i>Enviar</button>
 
             </div>
             <?php if ($cerrada == 0 && is_array($datos)) { ?>
@@ -592,6 +592,28 @@ echo '<td class="text-right"> '.$info.'</td>';
 <script>
 $(document).ready(function () {
     
+    $("#enviarForm").on("click", function () {
+        i=0;
+        mal=0;
+        $( "select option:selected" ).each(function() {
+            ++i;
+            if ($( this ).text() == "-")
+            {
+                ++mal;
+
+            }
+        });
+
+
+        if (mal > 0){
+
+        
+            alert("ERROR: Existen "+mal+" resultados sin completar");
+            return false;
+        }
+    });
+
+
         var element1 = $("#partido1"); // global variable
         var element2 = $("#partido2"); // global variable
         var element3 = $("#partido3"); // global variable
